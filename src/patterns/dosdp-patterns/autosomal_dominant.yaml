@@ -1,0 +1,43 @@
+pattern_name: autosomal_dominant
+
+pattern_iri: http://purl.obolibrary.org/obo/mondo/patterns/autosomal_dominant.yaml
+
+description: TBD.
+
+contributors:
+- https://orcid.org/0000-0002-6601-2165
+
+classes:
+  autosomal dominant inheritance: HP:0000006
+  disease: MONDO:0000001
+
+relations:
+  has modifier: RO:0002573
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+  related_synonym: oio:hasRelatedSynonym
+
+vars:
+  disease: '''disease'''
+
+name:
+  text: autosomal dominant %s
+  vars:
+  - disease
+
+annotations:
+- annotationProperty: exact_synonym
+  text: '%s, autosomal dominant'
+  vars:
+  - disease
+
+def:
+  text: Autosomal dominant form of %s.
+  vars:
+  - disease
+
+equivalentTo:
+  text: '%s and ''has modifier'' some ''autosomal dominant inheritance'''
+  vars:
+  - disease
