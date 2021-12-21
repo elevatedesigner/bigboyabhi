@@ -1,0 +1,47 @@
+pattern_name: meningioma disease has location X
+
+pattern_iri: http://purl.obolibrary.org/obo/mondo/patterns/meningioma.yaml
+
+description: 'This is auto-generated. Add your description here
+
+  Examples: [skin meningioma](http://purl.obolibrary.org/obo/MONDO_0004429), [brain
+  meningioma](http://purl.obolibrary.org/obo/MONDO_0000642), [choroid plexus meningioma](http://purl.obolibrary.org/obo/MONDO_0003053)
+  (26 total)'
+
+contributors:
+- https://orcid.org/0000-0002-6601-2165
+
+classes:
+  meningioma: MONDO:0016642
+  anatomical entity: UBERON:0001062
+
+relations:
+  disease has location: RO:0004026
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+  related_synonym: oio:hasRelatedSynonym
+
+vars:
+  v0: '''anatomical entity'''
+
+name:
+  text: '%s meningioma'
+  vars:
+  - v0
+
+annotations:
+- annotationProperty: exact_synonym
+  text: '%s meningioma'
+  vars:
+  - v0
+
+def:
+  text: A meningioma that affects the %s.
+  vars:
+  - v0
+
+equivalentTo:
+  text: '''meningioma'' and (''disease has location'' some %s)'
+  vars:
+  - v0
