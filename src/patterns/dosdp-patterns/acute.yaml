@@ -1,0 +1,43 @@
+pattern_name: acute
+
+pattern_iri: http://purl.obolibrary.org/obo/mondo/patterns/acute.yaml
+
+description: TBD.
+
+contributors:
+- https://orcid.org/0000-0002-6601-2165
+
+classes:
+  acute: PATO:0000389
+  disease: MONDO:0000001
+
+relations:
+  has modifier: RO:0002573
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+  related_synonym: oio:hasRelatedSynonym
+
+vars:
+  disease: '''disease'''
+
+name:
+  text: acute %s
+  vars:
+  - disease
+
+annotations:
+- annotationProperty: exact_synonym
+  text: '%s, acute'
+  vars:
+  - disease
+
+def:
+  text: Acute form of %s.
+  vars:
+  - disease
+
+equivalentTo:
+  text: '%s and ''has modifier'' some ''acute'''
+  vars:
+  - disease
